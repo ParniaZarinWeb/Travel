@@ -1,0 +1,1182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body,
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+main {
+    >header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+        margin-top: 6px;
+
+        >nav {
+
+            >div {
+                display: flex;
+                flex-wrap: nowrap;
+                flex-direction: row;
+                align-items: center;
+
+                >a {
+                    .logo {
+                        padding: 20px;
+                    }
+                }
+
+                >.nav {
+                    display: none;
+
+                    >ul {
+                        display: flex;
+                        justify-content: center;
+                        align-content: center;
+
+                        >li {
+                            padding: 15px 0px;
+                            transition: all 0.3s;
+                            border-radius: 5px;
+
+                            &:nth-of-type(2) {
+                                background-color: #8080c4;
+                            }
+
+                            &:hover {
+                                background-color: #8080c4;
+                            }
+
+                            >a {
+                                text-decoration: none;
+                                color: white;
+                                padding: 20px;
+                                text-align: center;
+                                font-size: 13px;
+                            }
+                        }
+                    }
+                }
+
+                >.social {
+                    display: none;
+
+                    >button {
+                        background-color: inherit;
+                        border: none;
+                        margin: 0 5px;
+
+
+                        &:hover {
+                            background-color: #6666a4bb;
+                            transition: all 0.3s;
+                        }
+
+                        >i {
+                            color: white;
+                            padding: 5px;
+                            font-size: 20px;
+                        }
+                    }
+                }
+
+                >.menu {
+                    >i {
+                        color: white;
+                        font-size: 40px;
+                        padding: 20px;
+
+                        &:hover {
+                            cursor: pointer;
+                        }
+
+                        &:last-of-type {
+                            display: none;
+                            font-size: 30px;
+                        }
+                    }
+                }
+            }
+        }
+
+        >.submenu {
+            display: none;
+            background-color: white;
+            padding: 0;
+
+            >li {
+                >a {
+                    text-decoration: none;
+                    color: black;
+                    display: block;
+                    padding: 23px;
+                    text-align: center;
+                    font-size: 13px;
+                    transition: all 0.3s;
+
+                    &:hover {
+                        background-color: #6666a4;
+                        color: white;
+                    }
+                }
+
+                &:nth-of-type(2) {
+                    background-color: #6666a4;
+
+                    >a {
+                        color: #fff;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .sec1 {
+        height: 500px;
+        background-image: url(../img/destinaton-banner211.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        z-index: 50;
+
+        >div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            >h1 {
+                text-align: center;
+                font-size: 50px;
+                font-family: "Nixie One", system-ui;
+                font-weight: 400;
+                padding: 0 20px;
+                padding-top: 70px;
+            }
+
+            >p {
+                text-align: center;
+                font-size: 24px;
+                padding: 10px 70px;
+                font-family: "Nixie One", system-ui;
+                font-weight: 400;
+                font-style: normal;
+            }
+        }
+    }
+
+    .sec2 {
+        background-color: #f0f0ed;
+        height: auto;
+
+        .container-xxl {
+            .row {
+                padding: 80px 0;
+                font-family: "Nixie One", system-ui;
+
+                .image1 {
+                    padding: 130px 50px;
+                    transition: all 0.5s ease;
+
+                    &:hover {
+                        transform: scale(1.03);
+                    }
+
+                    .img1 {
+                        background-image: url(../img/destination.jpg);
+                        width: 100%;
+                        height: 330px;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        position: relative;
+
+
+                        &:hover {
+                            .overly {
+                                opacity: 1;
+                            }
+
+                            .line,
+                            .p {
+                                transform: translateX(0);
+                                opacity: 1;
+                            }
+                        }
+
+                        >h3 {
+                            color: #fff;
+                            padding: 48px 40px;
+                            font-size: 28px;
+                            position: relative;
+                            z-index: 100;
+                        }
+
+                        .overly {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            background-color: #6666a477;
+                            color: #fff;
+                            opacity: 0;
+                            transition: all 0.3s ease;
+                            z-index: 50;
+
+                            >div {
+                                width: 90%;
+                                height: 3px;
+                                background-color: #fff;
+                                z-index: 100;
+                                transform: translateX(-100%);
+                                opacity: 0;
+                                transition: all 0.4s ease;
+                                margin: auto;
+                                margin-top: 90px;
+                            }
+
+                            >p {
+                                z-index: 100;
+                                transform: translateX(100%);
+                                opacity: 0;
+                                transition: all 0.4s ease;
+                                font-family: Arial, Helvetica, sans-serif;
+                                font-size: 14px;
+                                text-align: left;
+                                padding: 10px 40px;
+                            }
+                        }
+                    }
+                }
+
+                .image2 {
+                    padding: 130px 50px;
+
+                    transition: all 0.5s ease;
+
+                    &:hover {
+                        transform: scale(1.03);
+                    }
+
+                    .img2 {
+                        background-image: url(../img/destination8.jpg);
+                        width: 100%;
+                        height: 330px;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        position: relative;
+
+                        &:hover {
+                            .overly2 {
+                                opacity: 1;
+                            }
+
+                            .line,
+                            .p {
+                                transform: translateX(0);
+                                opacity: 1;
+                            }
+                        }
+
+                        >h3 {
+                            color: #fff;
+                            padding: 48px 40px;
+                            font-size: 28px;
+                            position: relative;
+                            z-index: 100;
+                        }
+
+                        .overly2 {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            background-color: #6666a477;
+                            color: #fff;
+                            opacity: 0;
+                            transition: all 0.3s ease;
+                            z-index: 50;
+
+                            >div {
+                                width: 90%;
+                                height: 3px;
+                                background-color: #fff;
+                                z-index: 100;
+                                transform: translateX(-100%);
+                                opacity: 0;
+                                transition: all 0.4s ease;
+                                margin: auto;
+                                margin-top: 90px;
+                            }
+
+                            >p {
+                                z-index: 100;
+                                transform: translateX(100%);
+                                opacity: 0;
+                                transition: all 0.4s ease;
+                                font-family: Arial, Helvetica, sans-serif;
+                                font-size: 14px;
+                                text-align: left;
+                                padding: 10px 40px;
+                            }
+                        }
+                    }
+                }
+
+                .image3 {
+                    padding: 130px 50px;
+                    transition: all 0.5s ease;
+
+                    &:hover {
+                        transform: scale(1.03);
+                    }
+
+                    .img3 {
+                        background-image: url(../img/destination7.jpg);
+                        width: 100%;
+                        height: 330px;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        position: relative;
+
+                        &:hover {
+                            .overly3 {
+                                opacity: 1;
+                            }
+
+                            .line,
+                            .p {
+                                transform: translateX(0);
+                                opacity: 1;
+                            }
+                        }
+
+                        >h3 {
+                            color: #fff;
+                            padding: 48px 40px;
+                            font-size: 28px;
+                            position: relative;
+                            z-index: 100;
+                        }
+
+                        .overly3 {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            background-color: #6666a477;
+                            color: #fff;
+                            opacity: 0;
+                            transition: all 0.3s ease;
+                            z-index: 50;
+
+                            >div {
+                                width: 90%;
+                                height: 3px;
+                                background-color: #fff;
+                                z-index: 100;
+                                transform: translateX(-100%);
+                                opacity: 0;
+                                transition: all 0.4s ease;
+                                margin: auto;
+                                margin-top: 90px;
+                            }
+
+                            >p {
+                                z-index: 100;
+                                transform: translateX(100%);
+                                opacity: 0;
+                                transition: all 0.4s ease;
+                                font-family: Arial, Helvetica, sans-serif;
+                                font-size: 14px;
+                                text-align: left;
+                                padding: 10px 40px;
+                            }
+                        }
+                    }
+                }
+
+                .image4 {
+                    padding: 130px 50px;
+                    transition: all 0.5s ease;
+
+                    &:hover {
+                        transform: scale(1.03);
+                    }
+
+                    .img4 {
+                        background-image: url(../img/destination6.jpg);
+                        width: 100%;
+                        height: 330px;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        position: relative;
+
+                        &:hover {
+                            .overly4 {
+                                opacity: 1;
+                            }
+
+                            .line,
+                            .p {
+                                transform: translateX(0);
+                                opacity: 1;
+                            }
+                        }
+
+                        >h3 {
+                            color: #fff;
+                            padding: 48px 40px;
+                            font-size: 28px;
+                            position: relative;
+                            z-index: 100;
+                        }
+
+                        .overly4 {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            background-color: #6666a477;
+                            color: #fff;
+                            opacity: 0;
+                            transition: all 0.3s ease;
+                            z-index: 50;
+
+                            >div {
+                                width: 90%;
+                                height: 3px;
+                                background-color: #fff;
+                                z-index: 100;
+                                transform: translateX(-100%);
+                                opacity: 0;
+                                transition: all 0.4s ease;
+                                margin: auto;
+                                margin-top: 90px;
+                            }
+
+                            >p {
+                                z-index: 100;
+                                transform: translateX(100%);
+                                opacity: 0;
+                                transition: all 0.4s ease;
+                                font-family: Arial, Helvetica, sans-serif;
+                                font-size: 14px;
+                                text-align: left;
+                                padding: 10px 40px;
+                            }
+                        }
+                    }
+                }
+
+                .image5 {
+                    padding: 130px 50px;
+                    transition: all 0.5s ease;
+
+                    &:hover {
+                        transform: scale(1.03);
+                    }
+
+                    .img5 {
+                        background-image: url(../img/destination5.jpg);
+                        width: 100%;
+                        height: 330px;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        position: relative;
+
+                        &:hover {
+                            .overly5 {
+                                opacity: 1;
+                            }
+
+                            .line,
+                            .p {
+                                transform: translateX(0);
+                                opacity: 1;
+                            }
+                        }
+
+                        >h3 {
+                            color: #fff;
+                            padding: 48px 40px;
+                            font-size: 28px;
+                            position: relative;
+                            z-index: 100;
+                        }
+
+                        .overly5 {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            background-color: #6666a477;
+                            color: #fff;
+                            opacity: 0;
+                            transition: all 0.3s ease;
+                            z-index: 50;
+
+                            >div {
+                                width: 90%;
+                                height: 3px;
+                                background-color: #fff;
+                                z-index: 100;
+                                transform: translateX(-100%);
+                                opacity: 0;
+                                transition: all 0.4s ease;
+                                margin: auto;
+                                margin-top: 90px;
+                            }
+
+                            >p {
+                                z-index: 100;
+                                transform: translateX(100%);
+                                opacity: 0;
+                                transition: all 0.4s ease;
+                                font-family: Arial, Helvetica, sans-serif;
+                                font-size: 14px;
+                                text-align: left;
+                                padding: 10px 40px;
+                            }
+                        }
+                    }
+                }
+
+                .image6 {
+                    padding: 130px 50px;
+                    transition: all 0.5s ease;
+
+                    &:hover {
+                        transform: scale(1.03);
+                    }
+
+                    .img6 {
+                        background-image: url(../img/destination4.jpg);
+                        width: 100%;
+                        height: 330px;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        position: relative;
+
+                        &:hover {
+                            .overly6 {
+                                opacity: 1;
+                            }
+
+                            .line,
+                            .p {
+                                transform: translateX(0);
+                                opacity: 1;
+                            }
+                        }
+
+                        >h3 {
+                            color: #fff;
+                            padding: 48px 40px;
+                            font-size: 28px;
+                            position: relative;
+                            z-index: 100;
+                        }
+
+                        .overly6 {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            background-color: #6666a477;
+                            color: #fff;
+                            opacity: 0;
+                            transition: all 0.3s ease;
+                            z-index: 50;
+
+                            >div {
+                                width: 90%;
+                                height: 3px;
+                                background-color: #fff;
+                                z-index: 100;
+                                transform: translateX(-100%);
+                                opacity: 0;
+                                transition: all 0.4s ease;
+                                margin: auto;
+                                margin-top: 90px;
+                            }
+
+                            >p {
+                                z-index: 100;
+                                transform: translateX(100%);
+                                opacity: 0;
+                                transition: all 0.4s ease;
+                                font-family: Arial, Helvetica, sans-serif;
+                                font-size: 14px;
+                                text-align: left;
+                                padding: 10px 40px;
+                            }
+                        }
+                    }
+                }
+
+                .image7 {
+                    padding: 130px 50px;
+                    transition: all 0.5s ease;
+
+                    &:hover {
+                        transform: scale(1.03);
+                    }
+
+                    .img6 {
+                        background-image: url(../img/destination3-600x450.jpg);
+                        width: 100%;
+                        height: 330px;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        position: relative;
+
+                        &:hover {
+                            .overly6 {
+                                opacity: 1;
+                            }
+
+                            .line,
+                            .p {
+                                transform: translateX(0);
+                                opacity: 1;
+                            }
+                        }
+
+                        >h3 {
+                            color: #fff;
+                            padding: 48px 40px;
+                            font-size: 28px;
+                            position: relative;
+                            z-index: 100;
+                        }
+
+                        .overly6 {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            background-color: #6666a477;
+                            color: #fff;
+                            opacity: 0;
+                            transition: all 0.3s ease;
+                            z-index: 50;
+
+                            >div {
+                                width: 90%;
+                                height: 3px;
+                                background-color: #fff;
+                                z-index: 100;
+                                transform: translateX(-100%);
+                                opacity: 0;
+                                transition: all 0.4s ease;
+                                margin: auto;
+                                margin-top: 90px;
+                            }
+
+                            >p {
+                                z-index: 100;
+                                transform: translateX(100%);
+                                opacity: 0;
+                                transition: all 0.4s ease;
+                                font-family: Arial, Helvetica, sans-serif;
+                                font-size: 14px;
+                                text-align: left;
+                                padding: 10px 40px;
+                            }
+                        }
+                    }
+                }
+
+                .image8 {
+                    padding: 130px 50px;
+                    transition: all 0.5s ease;
+
+                    &:hover {
+                        transform: scale(1.03);
+                    }
+
+                    .img6 {
+                        background-image: url(../img/destination2-600x450.jpg);
+                        width: 100%;
+                        height: 330px;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        position: relative;
+
+                        &:hover {
+                            .overly6 {
+                                opacity: 1;
+                            }
+
+                            .line,
+                            .p {
+                                transform: translateX(0);
+                                opacity: 1;
+                            }
+                        }
+
+                        >h3 {
+                            color: #fff;
+                            padding: 48px 40px;
+                            font-size: 28px;
+                            position: relative;
+                            z-index: 100;
+                        }
+
+                        .overly6 {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            background-color: #6666a477;
+                            color: #fff;
+                            opacity: 0;
+                            transition: all 0.3s ease;
+                            z-index: 50;
+
+                            >div {
+                                width: 90%;
+                                height: 3px;
+                                background-color: #fff;
+                                z-index: 100;
+                                transform: translateX(-100%);
+                                opacity: 0;
+                                transition: all 0.4s ease;
+                                margin: auto;
+                                margin-top: 90px;
+                            }
+
+                            >p {
+                                z-index: 100;
+                                transform: translateX(100%);
+                                opacity: 0;
+                                transition: all 0.4s ease;
+                                font-family: Arial, Helvetica, sans-serif;
+                                font-size: 14px;
+                                text-align: left;
+                                padding: 10px 40px;
+                            }
+                        }
+                    }
+                }
+
+                .image9 {
+                    padding: 130px 50px;
+                    transition: all 0.5s ease;
+
+                    &:hover {
+                        transform: scale(1.03);
+                    }
+
+                    .img6 {
+                        background-image: url(../img/destination1-600x450.jpg);
+                        width: 100%;
+                        height: 330px;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        position: relative;
+
+                        &:hover {
+                            .overly6 {
+                                opacity: 1;
+                            }
+
+                            .line,
+                            .p {
+                                transform: translateX(0);
+                                opacity: 1;
+                            }
+                        }
+
+                        >h3 {
+                            color: #fff;
+                            padding: 48px 40px;
+                            font-size: 28px;
+                            position: relative;
+                            z-index: 100;
+                        }
+
+                        .overly6 {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            background-color: #6666a477;
+                            color: #fff;
+                            opacity: 0;
+                            transition: all 0.3s ease;
+                            z-index: 50;
+
+                            >div {
+                                width: 90%;
+                                height: 3px;
+                                background-color: #fff;
+                                z-index: 100;
+                                transform: translateX(-100%);
+                                opacity: 0;
+                                transition: all 0.4s ease;
+                                margin: auto;
+                                margin-top: 90px;
+                            }
+
+                            >p {
+                                z-index: 100;
+                                transform: translateX(100%);
+                                opacity: 0;
+                                transition: all 0.4s ease;
+                                font-family: Arial, Helvetica, sans-serif;
+                                font-size: 14px;
+                                text-align: left;
+                                padding: 10px 40px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .sec3 {
+        background-color: #6666a4;
+        height: auto;
+
+        .container-xxl {
+            .row {
+                padding: 50px 0;
+
+                >div {
+                    color: #fff;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 30px;
+
+                    >span {
+                        font-size: 60px;
+                    }
+
+                    >div {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+
+    .sec4 {
+        height: 700px;
+        background-image: url(../img/destination-parallax21.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        z-index: 50;
+
+        >div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            >h1 {
+                text-align: center;
+                font-size: 50px;
+                font-family: "Nixie One", system-ui;
+                font-weight: 400;
+                padding: 0 20px;
+            }
+
+            >p {
+                text-align: center;
+                font-size: 24px;
+                padding: 30px 45px;
+                font-family: "Nixie One", system-ui;
+                font-weight: 400;
+                font-style: normal;
+            }
+
+            >a {
+                >button {
+                    padding: 15px 40px;
+                    background-color: #6666a4;
+                    color: #fff;
+                    font-size: 18px;
+                    font-weight: 700;
+                    border: none;
+                    border-radius: 6px;
+                    box-shadow: 0px 5px 3px #4e4e88, 0px -1px 0px #fff, 3px 0 5px #4d4c4c;
+                    transition: all 0.2s;
+
+                    &:hover {
+                        background-color: #6e6eb3;
+                    }
+                }
+            }
+        }
+    }
+
+    .sec5 {
+        .container-fluid {
+            .row {
+                color: #fff;
+
+                >div {
+                    background-color: #6666a4;
+                    height: auto;
+                    padding: 70px;
+                    padding-right: 100px;
+                    cursor: pointer;
+
+                    &:nth-of-type(2) {
+                        background-color: #7070a9;
+                    }
+
+                    >div {
+                        font-family: "Nixie One", system-ui;
+                        font-size: 40px;
+                    }
+
+                    >p {
+                        line-height: 30px;
+                    }
+                }
+            }
+        }
+    }
+
+    .line {
+        width: 100%;
+        height: 15px;
+        background-color: #a3a3c8;
+    }
+
+    >footer {
+        background-color: #39394e;
+        width: 100%;
+        height: auto;
+
+        .bck {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .first {
+                >img {
+                    margin-top: 40px;
+                    margin-bottom: 15px;
+                }
+
+                >ul {
+                    text-align: center;
+
+                    >li {
+                        margin: 20px 0;
+                        display: block;
+
+                        &:nth-of-type(2) {
+                            >a {
+                                color: #6666a4;
+                            }
+                        }
+
+                        &:hover {
+                            >a {
+                                color: #6666a4;
+                            }
+                        }
+
+                        &:first-of-type {
+                            &:active {
+                                color: #6666a4 !important;
+                            }
+                        }
+
+                        >a {
+                            text-decoration: none;
+                            color: #fff;
+                            transition: all 0.3s;
+                        }
+                    }
+                }
+            }
+
+            .line2 {
+                width: 1000%;
+                height: 1px;
+                background-color: #474767;
+            }
+
+            .second {
+                >p {
+                    color: #fff;
+                    font-size: 13px;
+                    text-align: center;
+                    padding: 30px 50px;
+
+                    >a {
+                        color: #fff;
+                        font-size: 13px;
+                        text-decoration: none;
+                        transition: all 0.4s;
+
+                        &:hover {
+                            color: #6666a4;
+                        }
+                    }
+                }
+
+                .social2 {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 30px;
+
+                    >button {
+                        background-color: #45455f;
+                        border: none;
+                        margin: 0 5px;
+                        padding: 5px 10px;
+
+                        &:hover {
+                            background-color: #6666a49a;
+                            transition: all 0.3s;
+                        }
+
+                        >i {
+                            color: white;
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 576px) {
+    .header {
+        .logo {
+            width: 210px;
+        }
+
+        .social {
+            display: block !important;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .header {
+        .menu {
+            display: none;
+        }
+
+        .nav {
+            display: block !important;
+        }
+    }
+
+    .sec1 {
+        height: 650px !important;
+    }
+
+    .footer {
+
+        .bck {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .first {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: 35px 100px;
+                width: 100%;
+
+                >ul {
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: row;
+                    align-items: center;
+                    margin-top: 40px;
+                    gap: 0 100px;
+                }
+            }
+
+            .second {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: 35px 80px;
+                width: 100%;
+
+                >p {
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .sec1 {
+        background-attachment: fixed;
+    }
+
+    .sec2 {
+        .container-xxl {
+            .row {
+                padding: 200px 0 !important;
+
+                .image-box {
+                    padding: 20px 0 !important;
+                }
+            }
+        }
+    }
+}
